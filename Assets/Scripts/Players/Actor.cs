@@ -14,6 +14,7 @@ namespace Players
 		public int points;
 
 		public Transform footPos;
+		public Transform GunPos;
 		public GameObject jumpFx;
 		public GameObject playerExplodeFx;
 		public GameObject scoreFx;
@@ -215,7 +216,7 @@ namespace Players
 		public void GiveWeapon(GameObject weapon)
 		{
 			Destroy(gun);
-			gun = Instantiate(weapon, gun.transform.position, gun.transform.rotation);
+			gun = Instantiate(weapon, GunPos.transform.position, GunPos.transform.rotation);
 			weaponScript = gun.GetComponent(typeof(Gun)) as Gun;
 			gun.transform.parent = this.transform;
 		}
