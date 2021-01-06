@@ -19,7 +19,7 @@ public class Gun : MonoBehaviour
 	{
 		if (!ready) return;
 
-		print("amount: " + amount);
+		//print("amount: " + amount);
 		for (int i = 0; i < amount; i++)
 		{
 			SpawnBullet();
@@ -65,12 +65,12 @@ public class Gun : MonoBehaviour
 		}
 
 		//Set the damage for the bullet
-		//((Bullet)(newBullet.GetComponent(typeof(Bullet)))).SetDamage(damage);
+		((Bullet)(newBullet.GetComponent(typeof(Bullet)))).SetDamage(damage);
 	}
 
 	public void EnemyWeapon()
 	{
-		bulletSpeed /= 3f;
+		bulletSpeed /= 2f;
 	}
 
 	private void Sword()
@@ -78,7 +78,7 @@ public class Gun : MonoBehaviour
 		//CameraShake.ShakeOnce(0.2f, 0.1f);
 		GameObject newBullet = Instantiate(bullet, transform.position, transform.rotation);
 		newBullet.layer = transform.parent.gameObject.layer + 1;
-		//((Bullet)(newBullet.GetComponent(typeof(Bullet)))).SetDamage(damage);
+		((Bullet)(newBullet.GetComponent(typeof(Bullet)))).SetDamage(damage);
 		newBullet.GetComponent<Rigidbody2D>().velocity = (transform.up * bulletSpeed);
 		//AudioManager.Play("Sword");
 	}

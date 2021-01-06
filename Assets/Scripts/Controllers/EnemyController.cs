@@ -19,7 +19,7 @@ public class EnemyController : MonoBehaviour
 	public GameObject sniperBoi;
 	public GameObject barrel;
 
-	private int maxNormalBois = 4;
+	private int maxNormalBois = 1;
 	private int maxFlyingBois = 3;
 	private int maxBigBois = 3;
 	private int maxSuicideBois = 10;
@@ -62,16 +62,16 @@ public class EnemyController : MonoBehaviour
 	{
 		totalTimer = 0f;
 		newTime = 3f;
-		bNewTime = 6f;
-		fNewTime = 7f;
-		suNewTime = 8;
-		snNewTime = 10f;
+		//bNewTime = 6f;
+		//fNewTime = 7f;
+		//suNewTime = 8;
+		//snNewTime = 10f;
 
 		nTimer = newTime;
-		bTimer = 0.1f;
-		fTimer = 0.1f;
-		suTimer = 0.1f;
-		snTimer = 0.1f;
+		//bTimer = 0.1f;
+		//fTimer = 0.1f;
+		//suTimer = 0.1f;
+		//snTimer = 0.1f;
 	}
 
 	private void Start()

@@ -14,16 +14,20 @@ public class Bullet : MonoBehaviour
 
 	private void OnTriggerEnter2D(Collider2D other)
 	{
+		print("Something");
 		if (gone)
 		{
 			Invoke("Reset", 0.02f);
 			return;
 		}
 		gone = true;
-		if (other.gameObject.CompareTag("Actor"))
+		if (other.CompareTag("Actor"))
 		{
-			Actor targetHit = other.gameObject.GetComponent(typeof(Actor)) as Actor;
-			if (other.gameObject.name == "Player")
+			Actor targetHit = other.GetComponent(typeof(Actor)) as Actor;
+
+            print(targetHit.tag);
+
+			if (other.name == "Player")
 			{
 				//CameraShake.ShakeOnce(0.3f, 1.6f);
 				//AudioManager.Play("PlayerDamage");
@@ -34,10 +38,12 @@ public class Bullet : MonoBehaviour
 			//damage
 			if (targetHit != null)
 			{
-				//targetHit.Damage(damage);
+
+				targetHit.Damage(damage);
 				targetHit.GetRb().AddForce(transform.up * 500f);
+				//Destroy(this.gameObject);
 			}
-			Destroy(gameObject);
+			Destroy(this.gameObject);
 		}
 
 		//if (destroyFx != null)
@@ -45,9 +51,10 @@ public class Bullet : MonoBehaviour
 
 		if (other.CompareTag("Bullet"))
 		{
+			print(other.tag);
 			if (transform.localScale.x <= other.transform.localScale.x)
 			{
-				Destroy(gameObject);
+				Destroy(this.gameObject);
 				return;
 			}
 			return;
@@ -55,15 +62,11 @@ public class Bullet : MonoBehaviour
 
 		if (other.gameObject.CompareTag("Wall"))
 		{
+			print(other.tag);
 			//AudioManager.Play("WallHit");
-			Destroy(gameObject);
+			Destroy(this.gameObject);
 		}
 
-		if (other.gameObject.CompareTag("Barrel"))
-		{
-			//((Barrel)other.GetComponent(typeof(Barrel))).Explode();
-			Destroy(gameObject);
-		}
 
 	}
 

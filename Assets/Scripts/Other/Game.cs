@@ -119,7 +119,7 @@ public class Game : MonoBehaviour
         newMaxSpeed = 14;
         newJumpForce = 850;
         newJumps = 2;
-        health = 100;
+        health = 20;
 
         //height.interactable = true;
         //triple.interactable = true;

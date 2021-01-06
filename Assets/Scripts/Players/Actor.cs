@@ -38,7 +38,7 @@ namespace Players
 
 		//Health and stuff
 		public float Health { get; set; }
-		public float startHealth = 100;
+		public float startHealth = 20;
 
 		private float framesFlashing = 7f;
 
@@ -123,25 +123,25 @@ namespace Players
 			}
 		}
 
-		//public void Damage(float damage)
-		//{
-		//	Health -= damage;
-		//	if (Health <= 0)
-		//	{
-		//		Kill();
-		//		if (gameObject.layer == LayerMask.NameToLayer("Enemy"))
-		//		{
-		//			if (scored) return;
-		//			scored = true;
-		//			ScoreController.AddScore(points);
-		//			GameObject scorePop = Instantiate(scoreFx, transform.position, Quaternion.identity);
-		//			scorePop.GetComponentInChildren<TextMeshProUGUI>().text = "" + points;
-		//		}
-		//	}
-		//	DamageFlash();
-		//}
+        public void Damage(float damage)
+        {
+            Health -= damage;
+            if (Health <= 0)
+            {
+                Kill();
+                if (gameObject.layer == LayerMask.NameToLayer("Enemy"))
+                {
+                    if (scored) return;
+                    scored = true;
+                    ScoreController.AddScore(points);
+                    GameObject scorePop = Instantiate(scoreFx, transform.position, Quaternion.identity);
+                    scorePop.GetComponentInChildren<TextMeshProUGUI>().text = "" + points;
+                }
+            }
+            DamageFlash();
+        }
 
-		private void DamageFlash()
+        private void DamageFlash()
 		{
 			sprite.color = new Color(1, 1, 1, 1f);
 			Invoke("ResetColor", Time.deltaTime * framesFlashing);
@@ -215,7 +215,7 @@ namespace Players
 
 		public void GiveWeapon(GameObject weapon)
 		{
-			Destroy(gun);
+			//Destroy(gun);
 			gun = Instantiate(weapon, GunPos.transform.position, GunPos.transform.rotation);
 			weaponScript = gun.GetComponent(typeof(Gun)) as Gun;
 			gun.transform.parent = this.transform;
