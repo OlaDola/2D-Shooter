@@ -20,10 +20,10 @@ public class EnemyController : MonoBehaviour
 	public GameObject barrel;
 
 	private int maxNormalBois = 1;
-	private int maxFlyingBois = 3;
-	private int maxBigBois = 3;
-	private int maxSuicideBois = 10;
-	private int maxSniperBois = 2;
+	private int maxFlyingBois = 1;
+	private int maxBigBois = 1;
+	private int maxSuicideBois = 1;
+	private int maxSniperBois = 1;
 
 	public int normalBois, flyingBois, bigBois, suicideBois, sniperBois;
 

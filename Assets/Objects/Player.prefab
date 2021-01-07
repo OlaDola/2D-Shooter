@@ -187,8 +187,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5572af2d6677d824b92fd761a9f23d17, type: 3}
-  m_Color: {r: 0.735849, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: f51ae8bddb461224f968219a154b0fbf, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -215,7 +215,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.95, y: 0.95}
     newSize: {x: 2.56, y: 2.56}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -257,7 +257,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4273358fdf4436f47a657779ee082af6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 1414023665962490381, guid: 7d650e984e6a5014cbe0bdaaffe665e5, type: 3}
+  healthBar: {fileID: 0}
   points: 40
   footPos: {fileID: 7443232746499910211}
   GunPos: {fileID: 909319132054127973}

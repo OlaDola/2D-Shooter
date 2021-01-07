@@ -4,6 +4,7 @@ using Microsoft.Win32;
 using TMPro;
 using UnityEngine;
 
+
 namespace Players
 {
 	public class Actor : MonoBehaviour
@@ -21,6 +22,8 @@ namespace Players
 		public GameObject jumpFx;
 		public GameObject playerExplodeFx;
 		public GameObject scoreFx;
+
+		public Timer time;
 
 		private bool facingRight;
 		private bool jumpReady = true;
@@ -73,7 +76,6 @@ namespace Players
 			sprite.flipX = true;
 			Health = startHealth;
 			standardScale = transform.localScale;
-			//healthBar=canvas.GetComponent(typeof(HealthBar)) as HealthBar;
 			healthBar.SetMaxHealth(startHealth);
 		}
 
@@ -237,6 +239,7 @@ namespace Players
 			else
 			{
 				AudioManager.Play("EnemyDeath");
+                
 			}
 			Health = -1;
 			//GameObject playerExplosion = Instantiate(playerExplodeFx, transform.position, transform.rotation);

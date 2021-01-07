@@ -101,7 +101,7 @@ MonoBehaviour:
   bulletSpeed: 30
   fireRate: 1
   recoil: 1
-  damage: 1
+  damage: 10
   amount: 1
   spread: 0
   ready: 1

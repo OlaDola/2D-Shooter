@@ -273,8 +273,9 @@ public class Game : MonoBehaviour
 		//GameOverUI.instance.UpdateScore();
 		//gameOverUI.SetActive(true);
 
-		//EnemyController.instance.spawn = false;
+		EnemyController.instance.spawn = false;
 
+		Quit();
 		//AudioManager.Stop("Song");
 	}
 
