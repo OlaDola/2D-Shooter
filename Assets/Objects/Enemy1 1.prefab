@@ -59,7 +59,7 @@ Transform:
   m_GameObject: {fileID: 8321959336110841393}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.28, y: -1.786, z: 0}
-  m_LocalScale: {x: 0.75, y: 0.75, z: 0.5427166}
+  m_LocalScale: {x: 0.75, y: 1, z: 0.5427166}
   m_Children:
   - {fileID: 8321959336543638533}
   - {fileID: 1971308934564494789}
@@ -183,6 +183,7 @@ MonoBehaviour:
   jumpFx: {fileID: 0}
   playerExplodeFx: {fileID: 0}
   scoreFx: {fileID: 0}
+  time: {fileID: 0}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256

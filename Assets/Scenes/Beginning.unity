@@ -297,6 +297,12 @@ MonoBehaviour:
     pitch: 1.05
     loop: 0
     source: {fileID: 0}
+  - name: Pistol
+    clip: {fileID: 8300000, guid: 97b7e5cce7875d9408d551dcb893e4b2, type: 3}
+    volume: 0.22
+    pitch: 1.05
+    loop: 0
+    source: {fileID: 0}
 --- !u!4 &90605629
 Transform:
   m_ObjectHideFlags: 0
@@ -503,7 +509,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &386403490
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1122,7 +1128,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1301230068
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1394,7 +1400,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1706466231
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1843,6 +1849,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8321959336110841391, guid: 0dfe404c97265b64abfebd589c4c519a,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 8321959336110841393, guid: 0dfe404c97265b64abfebd589c4c519a,
         type: 3}
