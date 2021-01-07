@@ -257,6 +257,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4273358fdf4436f47a657779ee082af6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvas: {fileID: 1414023665962490381, guid: 7d650e984e6a5014cbe0bdaaffe665e5, type: 3}
   points: 40
   footPos: {fileID: 7443232746499910211}
   GunPos: {fileID: 909319132054127973}

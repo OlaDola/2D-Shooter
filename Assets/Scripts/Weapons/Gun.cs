@@ -1,4 +1,4 @@
-﻿//using Audio;
+﻿using Audio;
 using UnityEngine;
 
 public class Gun : MonoBehaviour
@@ -56,12 +56,12 @@ public class Gun : MonoBehaviour
 		//play sound
 		if (transform.parent.name == "Player")
 		{
-			//AudioManager.Play("PlayerPistol");
+			AudioManager.Play("PlayerPistol");
 			//CameraShake.ShakeOnce(0.2f, 0.1f);
 		}
 		else
 		{
-			//AudioManager.Play("Pistol");
+			AudioManager.Play("Pistol");
 		}
 
 		//Set the damage for the bullet

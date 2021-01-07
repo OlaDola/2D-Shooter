@@ -51,14 +51,14 @@ public class Game : MonoBehaviour
     {
         inGame = true;
 
-        float x = Random.Range(-9f, 9f);
-        float y = MapGenerator.floorPos.y;
+        //float x = Random.Range(-9f, 9f);
+        //float y = MapGenerator.floorPos.y;
 
-        Vector2 SpawnPos = new Vector2(x, y);
+        //Vector2 SpawnPos = new Vector2(x, y);
 
-        GameObject newPlayer = Instantiate(player, SpawnPos, transform.rotation);
-        newPlayer.name = "Player";
-        currentPlayer = newPlayer;
+        //GameObject newPlayer = Instantiate(player, SpawnPos, transform.rotation);
+        player.name = "Player";
+        currentPlayer = player;
         currentPlayerScript = currentPlayer.GetComponent(typeof(Player)) as Player;
 
 		ResetUpgrades();

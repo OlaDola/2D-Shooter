@@ -1,5 +1,5 @@
 ﻿using System;
-//using Audio;
+using Audio;
 using Microsoft.Win32;
 using TMPro;
 using UnityEngine;
@@ -8,6 +8,9 @@ namespace Players
 {
 	public class Actor : MonoBehaviour
 	{
+		//public Canvas canvas;
+		
+		public HealthBar healthBar;
 
 		private bool scored;
 		//how many points enemy is worth
@@ -38,7 +41,7 @@ namespace Players
 
 		//Health and stuff
 		public float Health { get; set; }
-		public float startHealth = 20;
+		public float startHealth = 100;
 
 		private float framesFlashing = 7f;
 
@@ -70,6 +73,8 @@ namespace Players
 			sprite.flipX = true;
 			Health = startHealth;
 			standardScale = transform.localScale;
+			//healthBar=canvas.GetComponent(typeof(HealthBar)) as HealthBar;
+			healthBar.SetMaxHealth(startHealth);
 		}
 
 		private void FixedUpdate()
@@ -126,7 +131,8 @@ namespace Players
         public void Damage(float damage)
         {
             Health -= damage;
-            if (Health <= 0)
+			healthBar.SetHealth(Health);
+			if (Health <= 0)
             {
                 Kill();
                 if (gameObject.layer == LayerMask.NameToLayer("Enemy"))
@@ -199,7 +205,7 @@ namespace Players
 			//Instantiate(jumpFx, transform.position, transform.rotation);
 
 			//Play jump sound
-			//AudioManager.Play("Jump");
+			AudioManager.Play("Jump");
 
 			rb.velocity = new Vector2(rb.velocity.x, 0);
 
@@ -225,12 +231,12 @@ namespace Players
 		{
 			if (gameObject.name == "Player")
 			{
-				//AudioManager.Play("PlayerDeath");
+				AudioManager.Play("PlayerDeath");
 				//CameraShake.ShakeOnce(0.6f, 1.4f);
 			}
 			else
 			{
-				//AudioManager.Play("EnemyDeath");
+				AudioManager.Play("EnemyDeath");
 			}
 			Health = -1;
 			//GameObject playerExplosion = Instantiate(playerExplodeFx, transform.position, transform.rotation);
